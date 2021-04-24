@@ -3,8 +3,8 @@
     <head>
       <meta charset="utf-8">
       <title> Test </title>
-      <link rel="stylesheet" href="css/normalize.css">
       <link rel="stylesheet" href="css/main.css">
+      <script src="js/main.js"></script>
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
     </head>
@@ -79,7 +79,7 @@
         <path d="M79.5415 66.8546C78.0124 66.8025 74.8585 67.2804 74.4328 69.1136C74.1113 70.5037 75.3103 71.9112 76.7265 71.9808C78.8117 72.0763 81.2705 68.9225 79.5415 66.8546Z" fill="#02546A"/>
       </g>
     </svg>
-    <section class="LoginBox">
+    <section class="LoginBox" >
 
       <div class="imageBX">
         <svg class="imageSearch" width="350" height="350" viewBox="0 0 470 470" fill="none" >
@@ -182,7 +182,8 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M166.832 223.867C161.695 220.509 153.927 212.621 150.165 206.998C144.785 198.907 141.225 190.249 139.485 180.945C138.231 174.189 138.271 163.792 139.525 157.764C140.82 151.615 142.479 146.923 145.432 140.976C148.87 134.098 152.511 129.042 157.973 123.58C163.328 118.225 139.525 140.372 145.432 179.999C150.165 213.206 170.507 226.288 166.832 223.867Z" fill="#E7EAEE"/>
         </svg>
       </div>
-      <div class="loginBX">
+
+      <div id="home" class="loginBX">
 
         <div class="team">
           - Team 1
@@ -205,21 +206,41 @@
         </p>
 
         <div>
-          <button class="login">
+          <button id= "loginButton" onclick="onLoginPressed()" class="login">
             Login
           </button>
         </div>
         <div >
-          <button class="signup">
+          <button id= "signupButton"  onclick="onSignupPressed()" class="signup">
             Signup
           </button>
         </div>
 
 
-        <a class = "documentation" href="request.html">Request a Poll</a>
+        <a class = "documentation" href="request.html">Request a poll</a>
 
       </div>
-
+      <div id="loginAction">
+        <label><h4 class="userNameLabel">Username</h4></label>
+        <input type="text" name="uname" class="username">
+        <label><h4 class="passwordLabel" >Password</h4></label>
+        <input type="password" class="password">
+        <button id= "userLogin" onclick="loginUser()" class="login">
+          Login
+        </button>
+      </div>
+      <div id="signupAction">
+        <label><h4 class="userNameLabel">Username</h4></label>
+        <input type="text" name="uname" class="username">
+        <label><h4 class="passwordLabel" >Password</h4></label>
+        <input type="password" class="password">
+        <label><h4 class="conformPasswordLabel" >Confirm password</h4></label>
+        <input type="password" class="conformPassword">
+        <button id= "userSignup" onclick="signupUser()" class="login">
+          Signup
+        </button>
+      </div>
     </section>
+
     </body>
     </html>
